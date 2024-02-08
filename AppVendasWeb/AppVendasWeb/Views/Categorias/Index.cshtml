@@ -1,15 +1,18 @@
 ﻿@model IEnumerable<AppVendasWeb.Models.Categoria>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Categoria";
 }
 
-<h1>Index</h1>
+<h1 class="display-5 text-light my-5">Categoria</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-outline-primary d-inline-flex align-items-center">
+        <svg class="me-2" bootstrap-icon="PlusLg" width="16" height="16" aria-label="Adicionar"></svg>Adicionar
+    </a>
+        
 </p>
-<table class="table">
+<table class="table table-dark table-striped table-hover">
     <thead>
         <tr>
             <th>
@@ -19,17 +22,24 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CategoriaNome)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.CategoriaId">Editar</a> 
-                <a asp-action="Details" asp-route-id="@item.CategoriaId">Detalhes</a> 
-                <a asp-action="Delete" asp-route-id="@item.CategoriaId">Excluir</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoriaNome)
+                </td>
+                <td class="text-end">
+                    <a class="text-decoration-none text-light btn btn-outline-info d-inline-flex align-items-center" asp-action="Edit" asp-route-id="@item.CategoriaId">
+                        <svg class="mx-2" bootstrap-icon="Pencil" width="16" height="16" aria-label="Editar"></svg>
+                    </a>
+                    <a class="text-decoration-none text-light btn btn-outline-warning d-inline-flex align-items-center" asp-action="Details" asp-route-id="@item.CategoriaId">
+                        <svg class="mx-2" bootstrap-icon="CardList" width="16" height="16" aria-label="Editar"></svg>
+                    </a>
+                    <a class="text-decoration-none text-light btn btn-outline-danger d-inline-flex align-items-center" asp-action="Delete" asp-route-id="@item.CategoriaId">
+                        <svg class="mx-2" bootstrap-icon="Trash2" width="16" height="16" aria-label="Editar"></svg>
+                    </a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

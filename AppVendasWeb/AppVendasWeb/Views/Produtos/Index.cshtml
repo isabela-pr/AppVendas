@@ -1,13 +1,15 @@
 ﻿@model IEnumerable<AppVendasWeb.Models.Produto>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Produtos";
 }
 
-<h1>Index</h1>
+<h1 class="display-5 text-light my-5">Produtos</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-secondary d-inline-flex align-items-center">
+        <svg class="me-2" bootstrap-icon="PlusSquare" width="16" height="16" aria-label="Adicionar"></svg>Adicionar
+    </a>
 </p>
 <table class="table table-dark table-striped table-hover">
     <thead>
@@ -37,10 +39,10 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Categoria.CategoriaNome)
                 </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.ProdutoId">Editar</a> |
-                    <a asp-action="Details" asp-route-id="@item.ProdutoId">Detalhe</a> |
-                    <a asp-action="Delete" asp-route-id="@item.ProdutoId">Excluir</a>
+                <td class="text-end">
+                    <a class="btn btn-outline-success" asp-action="Edit" asp-route-id="@item.ProdutoId">Editar</a>
+                    <a class="btn btn-outline-warning" asp-action="Details" asp-route-id="@item.ProdutoId">Detalhe</a>
+                    <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@item.ProdutoId">Excluir</a>
                 </td>
             </tr>
         }

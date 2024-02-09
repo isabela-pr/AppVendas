@@ -10,7 +10,7 @@
     <a asp-action="Create" class="btn btn-outline-primary d-inline-flex align-items-center">
         <svg class="me-2" bootstrap-icon="PlusLg" width="16" height="16" aria-label="Adicionar"></svg>Adicionar
     </a>
-        
+
 </p>
 <table class="table table-dark table-striped table-hover">
     <thead>
@@ -29,13 +29,13 @@
                     @Html.DisplayFor(modelItem => item.CategoriaNome)
                 </td>
                 <td class="text-end">
-                    <a class="text-decoration-none text-light btn btn-outline-info d-inline-flex align-items-center" asp-action="Edit" asp-route-id="@item.CategoriaId">
+                    <a class="text-decoration-none btn btn-outline-info d-inline-flex align-items-center" asp-action="Edit" asp-route-id="@item.CategoriaId">
                         <svg class="mx-2" bootstrap-icon="Pencil" width="16" height="16" aria-label="Editar"></svg>
                     </a>
-                    <a class="text-decoration-none text-light btn btn-outline-warning d-inline-flex align-items-center" asp-action="Details" asp-route-id="@item.CategoriaId">
+                    <a class="text-decoration-none btn btn-outline-warning d-inline-flex align-items-center" asp-action="Details" asp-route-id="@item.CategoriaId">
                         <svg class="mx-2" bootstrap-icon="CardList" width="16" height="16" aria-label="Editar"></svg>
                     </a>
-                    <a class="text-decoration-none text-light btn btn-outline-danger d-inline-flex align-items-center" asp-action="Delete" asp-route-id="@item.CategoriaId">
+                    <a class="text-decoration-none btn btn-outline-danger d-inline-flex align-items-center" asp-action="Delete" asp-route-id="@item.CategoriaId">
                         <svg class="mx-2" bootstrap-icon="Trash2" width="16" height="16" aria-label="Editar"></svg>
                     </a>
                 </td>

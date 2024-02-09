@@ -40,6 +40,10 @@
                     @Html.DisplayFor(modelItem => item.Categoria.CategoriaNome)
                 </td>
                 <td class="text-end">
+                    <a class="text-decoration-none text-secondary link-light btn btn-outline-light" asp-controller="Produto" asp-action="Create" asp-route-id="@item.ProdutoId">
+                        <svg class="mx-1" bootstrap-icon="PlusLg" width="20" height="20" aria-label="Adicionar"></svg>
+                        Novo Item
+                    </a>
                     <a class="btn btn-outline-success" asp-action="Edit" asp-route-id="@item.ProdutoId">Editar</a>
                     <a class="btn btn-outline-warning" asp-action="Details" asp-route-id="@item.ProdutoId">Detalhe</a>
                     <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@item.ProdutoId">Excluir</a>

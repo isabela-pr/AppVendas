@@ -4,7 +4,7 @@
     ViewData["Title"] = "Vendas";
 }
 
-<h1 class="display-5 text-light my-5">Vendas</h1>
+<h1 class="display-5 text-info text-center my-5">Vendas</h1>
 
 <p>
     <a asp-action="Create" class="btn btn-outline-info d-inline-flex align-items-center">
@@ -43,12 +43,12 @@
                     @Html.DisplayFor(modelItem => item.NotaFiscal)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Cliente.CPF)
+                    @Html.DisplayFor(modelItem => item.Cliente.ClienteNome)
                 </td>
                 <td class="text-end">
-                    <a class="text-decoration-none text-info link-light btn btn-outline-light" asp-controller="Venda" asp-action="Create" asp-route-id="@item.VendaId">
+                    <a class="text-decoration-none text-info link-light btn btn-outline-light" asp-controller="ItensDaVenda" asp-action="Index" asp-route-id="@item.VendaId">
                         <svg class="mx-1" bootstrap-icon="PlusLg" width="20" height="20" aria-label="Adicionar"></svg>
-                        Novo Item
+                        Produtos
                     </a>
                     <a class="text-decoration-none text-info" asp-action="Edit" asp-route-id="@item.VendaId">
                         <svg class="mx-2" bootstrap-icon="PencilSquare" width="18" height="18" aria-label="Editar"></svg>

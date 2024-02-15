@@ -4,7 +4,7 @@
     ViewData["Title"] = "Cadastro de Clientes";
 }
 
-<h1 class="display-5 text-light my-5">Cadastro de Clientes</h1>
+<h1 class="display-5 text-light text-center my-5">Cadastro de Clientes</h1>
 
 <p>
     <a asp-action="Create" class="btn btn-outline-light d-inline-flex align-items-center">
@@ -62,10 +62,7 @@
                     </td>
 
                     <td class="text-end">
-                        <a class="text-decoration-none text-light link-light btn btn-outline-light" asp-controller="Cliente" asp-action="Create" asp-route-id="@item.ClienteId">
-                            <svg class="mx-1" bootstrap-icon="PlusLg" width="20" height="20" aria-label="Adicionar"></svg>
-                            Novo Item
-                        </a>
+
                         <a class="text-decoration-none text-light" asp-action="Edit" asp-route-id="@item.ClienteId">
                             <svg class="mx-2" bootstrap-icon="Pencil" width="16" height="16" aria-label="Editar"></svg>
                         </a>
